@@ -28,7 +28,8 @@ CREATE TABLE `movie` (
   `runtime` decimal(10,0) DEFAULT NULL,
   `director` varchar(100) COLLATE utf8mb4_bin DEFAULT NULL,
   `release_year` date DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `movie_un` (`title`,`director`,`release_year`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-10 14:41:34
+-- Dump completed on 2022-09-10 15:16:21
